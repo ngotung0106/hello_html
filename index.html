@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website 🐱</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff8f2;
+            color: #403449;
+            line-height: 1.6;
+        }
+
+        /* Thanh điều hướng */
+        header {
+            background: #e9d8ff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        header h2 {
+            color: #7041a6;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #403449;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #a855f7;
+        }
+
+        /* Phần giới thiệu */
+        .hero {
+            text-align: center;
+            padding: 75px 20px;
+            background: linear-gradient(135deg, #fce7f3, #ede9fe);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px #00000020;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-top: 20px;
+            color: #7041a6;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 12px auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 18px;
+            padding: 12px 25px;
+            background: #a855f7;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #7e22ce;
+            transform: translateY(-3px);
+        }
+
+        /* Các phần nội dung */
+        section {
+            padding: 55px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 30px;
+            color: #7041a6;
+            margin-bottom: 30px;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .info {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .info-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            min-width: 180px;
+            box-shadow: 0 4px 15px #0000000d;
+        }
+
+        /* Bộ sưu tập 10 ảnh mèo */
+        .cat-gallery {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .cat-card {
+            background: white;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000010;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 8px 22px #a855f740;
+        }
+
+        .cat-card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .cat-card p {
+            text-align: center;
+            font-weight: bold;
+            padding: 10px 0 3px;
+        }
+
+        /* Liên hệ */
+        .contact {
+            text-align: center;
+            background: #f3e8ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #e9d8ff;
+        }
+
+        /* Tương thích điện thoại và máy tính bảng */
+        @media (max-width: 900px) {
+            .cat-gallery {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            header {
+                justify-content: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .cat-gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            section {
+                padding: 40px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Thanh điều hướng -->
+    <header>
+        <h2>🐱 My Website</h2>
+
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#cats">Mèo của tôi</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
+    </header>
+
+    <!-- Giới thiệu bản thân -->
+    <main>
+        <section class="hero" id="home">
+            <img
+                class="avatar"
+                src="https://cataas.com/cat?width=300&height=300"
+                alt="Ảnh đại diện mèo dễ thương"
+            >
+
+            <h1>Xin chào! Tôi là Ngô Đình Tùng 👋</h1>
+
+            <p>
+                Chào mừng bạn đến với website cá nhân của tôi!
+                Tôi là một người yêu công nghệ, thích nghe nhạc,
+                khám phá những điều mới và đặc biệt là yêu mèo.
+            </p>
+
+            <a href="#about" class="button">Khám phá thêm ✨</a>
+        </section>
+
+        <!-- Thông tin cá nhân -->
+        <section id="about">
+            <h2 class="section-title">🌷 Giới thiệu bản thân</h2>
+
+            <div class="about">
+                <p>
+                    Tôi là một sinh viên yêu thích lập trình và thiết kế
+                    website. Tôi luôn muốn học hỏi những kiến thức mới
+                    để phát triển bản thân mỗi ngày.
+                </p>
+
+                <div class="info">
+                    <div class="info-card">
+                        <h3>🎓 Học vấn</h3>
+                        <p>Sinh viên</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>💻 Sở thích</h3>
+                        <p>Lập trình, chơi game</p>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>🐈 Đam mê</h3>
+                        <p>Mèo và động vật</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bộ sưu tập mèo -->
+        <section id="cats">
+            <h2 class="section-title">🐾 10 chú mèo đáng yêu</h2>
+
+            <div class="cat-gallery">
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=1"
+                         alt="Mèo số 1" loading="lazy">
+                    <p>Meo meo 🐱</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=2"
+                         alt="Mèo số 2" loading="lazy">
+                    <p>Mèo tinh nghịch 😸</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=3"
+                         alt="Mèo số 3" loading="lazy">
+                    <p>Mèo dễ thương 😻</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=4"
+                         alt="Mèo số 4" loading="lazy">
+                    <p>Mèo ngủ gật 💤</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=5"
+                         alt="Mèo số 5" loading="lazy">
+                    <p>Mèo hoàng thượng 👑</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=6"
+                         alt="Mèo số 6" loading="lazy">
+                    <p>Mèo ngáo 🤪</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=7"
+                         alt="Mèo số 7" loading="lazy">
+                    <p>Mèo lười 🛌</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=8"
+                         alt="Mèo số 8" loading="lazy">
+                    <p>Mèo đáng yêu 💕</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=9"
+                         alt="Mèo số 9" loading="lazy">
+                    <p>Mèo tò mò 🧐</p>
+                </div>
+
+                <div class="cat-card">
+                    <img src="https://cataas.com/cat?width=400&height=400&unique=10"
+                         alt="Mèo số 10" loading="lazy">
+                    <p>Mèo hạnh phúc 😽</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Liên hệ -->
+        <section class="contact" id="contact">
+            <h2 class="section-title">📩 Liên hệ với tôi</h2>
+
+            <p>Nếu bạn cũng yêu mèo, chúng ta có thể làm bạn! 🐱</p>
+
+            <a href="mailto:diluxe69ogacc@gmail.com" class="button">
+                Gửi email cho tôi
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Ngô Đình Tùng | Made with ❤️ and 🐱</p>
+    </footer>
+
+</body>
+</html>
